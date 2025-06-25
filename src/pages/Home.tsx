@@ -1,0 +1,14 @@
+import React from "react";
+import styles from "./Home.module.scss";
+import { HeroPromo } from "../components/HeroPromo";
+import { ReviewCarousel } from "../components/ReviewCarousel";
+
+export const Home: React.FC = () => (
+  <div className={styles.home}>
+    <HeroPromo />
+    <section className={styles.reviewsSection}>
+      <h2>Ce que nos clients en pensent</h2>
+      <ReviewCarousel reviews={[]} />
+    </section>
+  </div>
+);

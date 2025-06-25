@@ -1,0 +1,56 @@
+.header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1vh 3vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #b70b01;
+  gap: 5vw;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  text-shadow: -1px 0 2px black;
+  font-size: 0.85rem;
+  a {
+    font-size: x-large;
+  }
+}
+.brand {
+  font-size: 1.75rem;
+  color: $primary-color;
+  background-color: #b70b01;
+  img {
+    border-radius: 150px;
+    max-width: 38vw;
+    max-height: 15vh;
+  }
+}
+.navList {
+  display: none;
+  list-style: none;
+  @include respond-to(md) {
+    display: flex;
+    gap: spacer(4);
+  }
+}
+.link {
+  color: $text-color;
+  font-weight: 500;
+  transition: color 0.2s;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.active {
+  @extend .link;
+  color: $primary-color;
+}

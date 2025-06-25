@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/assets/promo-bg.jpg") center/cover no-repeat;
+
+  .content {
+    text-align: center;
+    background: rgba(white, 0.8);
+    padding: spacer(4);
+    border-radius: spacer(1);
+
+    h1 {
+      font-size: font-size("2xl");
+      margin-bottom: spacer(1);
+      color: $primary-color;
+      animation: pop-in 0.6s ease;
+    }
+    .sub {
+      font-size: font-size("sm");
+      color: gray;
+      margin-bottom: spacer(3);
+    }
+    .cta {
+      @include respond-to(md) {
+        padding: spacer(2) spacer(4);
+      }
+      padding: spacer(2) spacer(3);
+      background: $primary-color;
+      color: white;
+      text-decoration: none;
+      border-radius: spacer(1);
+      font-size: font-size("base");
+      transition: background 0.3s ease;
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// pop-in keyframes
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

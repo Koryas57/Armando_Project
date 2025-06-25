@@ -1,0 +1,23 @@
+.menu {
+  padding: 0 5vw;
+
+  h1 {
+    font-size: font-size("2xl");
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5vh auto;
+    padding: 1vh;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 150px;
+    background-color: #b70b01;
+    color: white;
+    text-shadow: -1px 0 2px black;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 5vh;
+    color: $text-color;
+  }
+}

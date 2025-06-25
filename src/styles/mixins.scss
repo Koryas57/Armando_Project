@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "./variables" as *;
+
+/// Usage: @include respond-to(md) { … }
+@mixin respond-to($breakpoint) {
+  $min: map.get($breakpoints, $breakpoint);
+  @media (min-width: $min) {
+    @content;
+  }
+}

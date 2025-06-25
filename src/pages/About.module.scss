@@ -1,0 +1,23 @@
+.about {
+  padding: spacer(4);
+
+  h1 {
+    font-size: font-size("2xl");
+    margin-bottom: spacer(2);
+  }
+
+  p {
+    margin-bottom: spacer(2);
+    line-height: 1.6;
+  }
+
+  .reviews {
+    margin-top: spacer(5);
+
+    h2 {
+      font-size: font-size("xl");
+      margin-bottom: spacer(3);
+      text-align: center;
+    }
+  }
+}

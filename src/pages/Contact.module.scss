@@ -1,0 +1,46 @@
+/* src/pages/Contact/Contact.module.scss */
+.contact {
+  padding: spacer(4);
+
+  h1 {
+    font-size: font-size("2xl");
+    margin-bottom: spacer(2);
+  }
+
+  p {
+    margin-bottom: spacer(2);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: spacer(4);
+
+    li {
+      margin-bottom: spacer(1);
+
+      ul {
+        margin-top: spacer(1);
+        margin-left: spacer(2);
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .mapWrapper {
+    border-radius: spacer(1);
+    overflow: hidden;
+
+    iframe {
+      border: 0;
+    }
+  }
+}

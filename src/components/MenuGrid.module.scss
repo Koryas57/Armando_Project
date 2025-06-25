@@ -1,0 +1,20 @@
+/* src/components/MenuGrid.module.scss */
+.container {
+  padding: spacer(4) 0;
+}
+.categorySection {
+  margin-bottom: spacer(5);
+}
+.categoryTitle {
+  @include respond-to(md) {
+    font-size: font-size("2xl");
+  }
+  font-size: font-size("xl");
+  margin-bottom: spacer(3);
+  text-transform: uppercase;
+}
+.grid {
+  display: grid;
+  gap: spacer(4);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
