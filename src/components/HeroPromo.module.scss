@@ -1,37 +1,41 @@
 .hero {
   position: relative;
-  height: 60vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/assets/promo-bg.jpg") center/cover no-repeat;
 
   .content {
     text-align: center;
     background: rgba(white, 0.8);
-    padding: spacer(4);
-    border-radius: spacer(1);
+    padding: 1rem;
+    border-radius: 1rem;
 
     h1 {
-      font-size: font-size("2xl");
-      margin-bottom: spacer(1);
+      font-size: x-large;
+      color: $primary-color;
+      animation: pop-in 0.6s ease;
+    }
+    h2 {
+      font-size: xx-large;
+      margin: 0.5rem;
       color: $primary-color;
       animation: pop-in 0.6s ease;
     }
     .sub {
       font-size: font-size("sm");
       color: gray;
-      margin-bottom: spacer(3);
+      margin-bottom: 1rem;
     }
     .cta {
       @include respond-to(md) {
-        padding: spacer(2) spacer(4);
+        padding: 0.75rem 1.5rem;
       }
-      padding: spacer(2) spacer(3);
+      padding: 0.5rem;
       background: $primary-color;
       color: white;
       text-decoration: none;
-      border-radius: spacer(1);
+      border-radius: 1rem;
       font-size: font-size("base");
       transition: background 0.3s ease;
       &:hover {

@@ -6,7 +6,7 @@
   z-index: 100;
 }
 .navbar {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 1vh 3vw;
   display: flex;
@@ -37,20 +37,21 @@
 .navList {
   display: none;
   list-style: none;
-  @include respond-to(md) {
+  @include respond-to(lg) {
     display: flex;
-    gap: spacer(4);
+    gap: 2rem;
   }
 }
 .link {
-  color: $text-color;
+  color: $primary-color;
   font-weight: 500;
   transition: color 0.2s;
+  text-wrap-mode: nowrap;
   &:hover {
-    color: $primary-color;
+    color: $secondary-color;
   }
 }
 .active {
   @extend .link;
-  color: $primary-color;
+  color: $secondary-color;
 }
