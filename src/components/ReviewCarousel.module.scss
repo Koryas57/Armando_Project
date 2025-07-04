@@ -1,7 +1,88 @@
-.carousel {
+.carouselContainer {
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+  }
+}
+
+.carousel {
   display: flex;
+  gap: 1rem;
   overflow-x: auto;
-  gap: spacer(4);
-  padding: spacer(4) 0;
+  scroll-snap-type: x mandatory;
+  padding: 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 250px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  background: #e74c3c;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  .author {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .stars {
+    color: #f1c40f;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    color: #555;
+  }
 }
