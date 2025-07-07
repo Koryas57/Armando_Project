@@ -8,6 +8,7 @@ export const Home: React.FC = () => (
   <div className={styles.home}>
     <HeroPromo />
     <section className={styles.reviewsSection}>
+      <img src="/assets/pizzas/Greviews.png" alt="Icone Avis Google" />
       <h2>Ce que nos clients en pensent</h2>
       <ReviewCarousel reviews={reviews} />
     </section>
